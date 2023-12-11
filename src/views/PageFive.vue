@@ -187,21 +187,23 @@ export default {
             const fadePanel = document.getElementsByClassName("fade-panel")[0];
             const bgm = document.getElementById("bgm");
 
-            const fadeOut = (timestamp) => {
-                if (!start) {
-                    start = timestamp;
-                }
-                const progress = timestamp - start;
-                fadePanel.style.opacity = progress / 1000 * 0.588; // 0.588 is the opacity value for 1.7 seconds
-                bgm.volume = 1 - progress / 1000 * 0.5;
-                if (progress < 1700) {
-                    requestAnimationFrame(fadeOut);
-                } else {
-                    this.$router.push("/page-six");
-                }
-            }
+            this.$router.push("/page-six");
+
+            // const fadeOut = (timestamp) => {
+            //     if (!start) {
+            //         start = timestamp;
+            //     }
+            //     const progress = timestamp - start;
+            //     fadePanel.style.opacity = progress / 1000 * 0.588; // 0.588 is the opacity value for 1.7 seconds
+            //     bgm.volume = 1 - progress / 1000 * 0.5;
+            //     if (progress < 1700) {
+            //         requestAnimationFrame(fadeOut);
+            //     } else {
+            //         this.$router.push("/page-six");
+            //     }
+            // }
             
-            requestAnimationFrame(fadeOut);
+            // requestAnimationFrame(fadeOut);
         },
         onChangeFontSize() {
             const textImg = this.$refs["text-img"];

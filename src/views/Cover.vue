@@ -125,16 +125,16 @@ export default {
             }
         }
 
-        // const playBGM = async () => {
-        //     try {
-        //         await bgm.play();
-        //     } catch(e) {
-        //         console.log(e);
-        //     }
-        //     setTimeout(playBGM, 10);
-        // }
+        const playBGM = async () => {
+            try {
+                await bgm.play();
+            } catch(e) {
+                console.log(e);
+            }
+            setTimeout(playBGM, 10);
+        }
 
-        // setTimeout(playBGM, 10);
+        setTimeout(playBGM, 10);
     },
     methods: {
         onVideoEnd() {

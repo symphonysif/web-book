@@ -21,23 +21,31 @@ export default {
         bgm.sound = 0;
 
         const playLoadingContainer = document.querySelector(".play-loading-container");
-        const checkOrientation = () => {
-            if(screen.orientation.type === "portrait-primary" || screen.orientation.type === "portrait-secondary") {
-                playLoadingContainer.style.display = "none";
-                this.playLoading = false;
-                this.orientation = true;
-                requestAnimationFrame(checkOrientation);
-            } else {
-                playLoadingContainer.style.display = "flex";
-                this.orientation = false;
-                if(this.isChromium) {
-                    this.playLoading = true;
-                }
-                requestAnimationFrame(checkOrientation);
-            }
-        }
+        // const checkOrientation = () => {
+        //     if(screen.orientation.type === "portrait-primary" || screen.orientation.type === "portrait-secondary") {
+        //         playLoadingContainer.style.display = "none";
+        //         this.playLoading = false;
+        //         this.orientation = true;
+        //         requestAnimationFrame(checkOrientation);
+        //     } else {
+        //         playLoadingContainer.style.display = "flex";
+        //         this.orientation = false;
+        //         if(this.isChromium) {
+        //             this.playLoading = true;
+        //         }
+        //         requestAnimationFrame(checkOrientation);
+        //     }
+        // }
 
-        requestAnimationFrame(checkOrientation);
+        // requestAnimationFrame(checkOrientation);
+
+        this.orientation = true;
+
+        if(this.isChromium) {
+            this.playLoading = true;
+        } else {
+            this.playLoading = false;
+        }
 
         if(this.loadingInterval === null) {
             /**
@@ -75,10 +83,10 @@ export default {
     <main>
         <div class="background">
             <label v-if="!playLoading">
-                <img v-if="orientation" class="rotate-device" src="@/assets/image/loading-rotate.svg">
+                <!-- <img v-if="orientation" class="rotate-device" src="@/assets/image/loading-rotate.svg"> -->
                 <img v-if="!isChromium" class="is-chromium" src="@/assets/image/use-chromium.svg">
             </label>
-            <div class="play-loading-container">
+            <div v-if="playLoading" class="play-loading-container">
                 <img src="/src/assets/image/icon.png">
                 <div class="loading-bar">
                     <div class="loading-bar-fill"></div>
@@ -96,10 +104,7 @@ export default {
 
 .is-chromium {
     rotate: -90deg;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(-100%) translateY(-300%);
+    width: 30vw;
 }
 
 .background {

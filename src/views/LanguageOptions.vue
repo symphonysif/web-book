@@ -41,6 +41,12 @@ export default {
     top: 10em;
 }
 
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+    .icon {
+        top: 5em;
+    }
+}
+
 .background {
     background-color: #EFD940;
     height: 100vh;

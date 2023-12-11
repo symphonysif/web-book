@@ -77,33 +77,33 @@ export default {
         // this.changeText(0);
         
         const bgm = document.getElementById("bgm");
-        bgm.src = this.linkBaseStore.linkBase + "src/assets/audio/music/Spread 19 - Spread 21.wav";
+        // bgm.src = this.linkBaseStore.linkBase + "src/assets/audio/music/Spread 19 - Spread 21.wav";
         const sound = this.$refs["sound"];
 
-        bgm.volume = 0;
+        // bgm.volume = 0;
         sound.volume = 0.5;
 
         if(this.languageStore.language == "malay") {
             sound.volume = 0;
         }
         
-        const fadePanel = document.getElementsByClassName("fade-panel")[0];
+        // const fadePanel = document.getElementsByClassName("fade-panel")[0];
 
         let start = null;
 
-        function fadeIn(timestamp) {
-            if (!start) {
-                start = timestamp;
-            }
-            const progress = timestamp - start;
-            fadePanel.style.opacity = 1 - progress / 1000 * 0.588; // 0.588 is the opacity value for 1.7 seconds
-            bgm.volume = progress / 1000 * 0.5;
-            if (progress < 1700) {
-                requestAnimationFrame(fadeIn);
-            }
-        }
+        // function fadeIn(timestamp) {
+        //     if (!start) {
+        //         start = timestamp;
+        //     }
+        //     const progress = timestamp - start;
+        //     fadePanel.style.opacity = 1 - progress / 1000 * 0.588; // 0.588 is the opacity value for 1.7 seconds
+        //     bgm.volume = progress / 1000 * 0.5;
+        //     if (progress < 1700) {
+        //         requestAnimationFrame(fadeIn);
+        //     }
+        // }
 
-        requestAnimationFrame(fadeIn);
+        // requestAnimationFrame(fadeIn);
 
     
         sound.onended = () => {
@@ -139,16 +139,16 @@ export default {
             }
         }
 
-        const playBGM = async () => {
-            try {
-                await bgm.play();
-            } catch(e) {
-                console.log(e);
-            }
-            setTimeout(playBGM, 10);
-        }
+        // const playBGM = async () => {
+        //     try {
+        //         await bgm.play();
+        //     } catch(e) {
+        //         console.log(e);
+        //     }
+        //     setTimeout(playBGM, 10);
+        // }
 
-        setTimeout(playBGM, 10);
+        // setTimeout(playBGM, 10);
     },
     methods: {
         onVideoEnd() {

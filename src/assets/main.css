@@ -1,0 +1,166 @@
+@import url('burger-animation.css');
+
+* {
+    margin: 0px;
+}
+
+body {
+    overflow: hidden;
+}
+
+.page-layout {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+
+    background-color: #41584B;
+
+    overflow: hidden;
+}
+
+.page-layout .text {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}
+
+.page-layout .text img {
+    width: 100%;
+}
+
+.text {
+    visibility: hidden;
+    transition: transform 0.7s ease-in;
+    transform: translateY(100%);
+}
+
+#text-animate-checkbox:checked ~ .text{
+    visibility: visible;
+    transform: translateY(0%);
+}
+
+.text-container {
+    z-index: 200;
+}
+
+button {
+    z-index: 100;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    /* padding: 1.2em; */
+    border-radius: 100%;
+    width: 6em;
+    height: 6em;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    /* padding: 1.2em; */
+    border-radius: 100%;
+    width: 4em;
+    height: 4em;
+}
+
+button img {
+    margin: 0;
+    width: 100%;
+}
+
+.button img {
+    margin: 0;
+    width: 100%;
+}
+
+.fullscreen-btn {
+    position: absolute;
+    left: 2.5em;
+    top: 4em;
+}
+
+.fullscreen-btn img {
+    width: 90%;
+}
+
+.burger {
+    position: absolute;
+    left: 2.5em;
+    top: 0;
+    padding-top: 0;
+    height: 2em;
+}
+
+.storytelling {
+    position: absolute;
+    left: 2.5em;
+    top: 9em;
+}
+
+.music {
+    position: absolute;
+    left: 2.5em;
+    top: 14em;
+}
+
+.sizefont {
+    position: absolute;
+    left: 2.5em;
+    top: 19em;
+}
+
+.next-btn {
+    position: absolute;
+    right: 2.5em;
+    bottom: 2.5em;
+    z-index: 999;
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+    .button {
+        width: 3em;
+        height: 3em;
+    }
+
+    .burger {
+        height: 1.5em;
+    }
+
+    .fullscreen-btn {
+        top: 2.5em; 
+    }
+
+    .storytelling {
+        top: 6.5em;
+    }
+
+    .music {
+        top: 10.5em;
+    }
+
+    .sizefont {
+        top: 14.5em;
+    }
+}
+
+.temp-image {
+    width: 100vw;
+    z-index: 100;
+}
+
+.fade-panel {
+    background-color: #000;
+    position: absolute;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 100000;
+
+    pointer-events: none;
+}

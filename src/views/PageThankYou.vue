@@ -76,9 +76,9 @@ export default {
         src="@/assets/image/thank you (malay).jpg"
         class="page"
     >
-    <label ref="next-btn" class="button next-btn" @click="onNextBtn()">
-        <img src="@/assets/icons/next-back.svg">
-    </label>
+
+    <a href="http://symphonycolours.com/craft-activity" class="clickable-link">
+    </a>
 </template>
 
 <style scoped>
@@ -93,5 +93,19 @@ export default {
         left: 0;
 
         opacity: 1;
+    }
+
+    .clickable-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 30vw;
+        height: 6vh;
+
+        z-index: 1000;
+        background-color: transparent;
+
+        transform: translate(120%, 1350%);
     }
 </style>

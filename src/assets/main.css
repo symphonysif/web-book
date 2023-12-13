@@ -96,22 +96,40 @@ button img {
     height: 2em;
 }
 
-.storytelling {
+.home {
     position: absolute;
     left: 2.5em;
     top: 9em;
 }
 
-.music {
+.replay-music {
     position: absolute;
     left: 2.5em;
     top: 14em;
 }
 
-.sizefont {
+.music {
     position: absolute;
     left: 2.5em;
     top: 19em;
+}
+
+.replay-sub {
+    position: absolute;
+    left: 2.5em;
+    top: 24em;
+}
+
+.storytelling {
+    position: absolute;
+    left: 2.5em;
+    top: 29em;
+}
+
+.sizefont {
+    position: absolute;
+    left: 2.5em;
+    top: 34em;
 }
 
 .next-btn {
@@ -123,28 +141,41 @@ button img {
 
 @media only screen and (max-height: 575.98px) and (orientation: landscape) {
     .button {
-        width: 3em;
-        height: 3em;
+        width: 2em;
+        height: 2em;
     }
 
     .burger {
+        transform: translateY(-15%);
         height: 1.5em;
     }
 
     .fullscreen-btn {
-        top: 2.5em; 
+        top: 2em; 
     }
 
-    .storytelling {
-        top: 6.5em;
+    .home {
+        top: 4.5em;
+    }
+
+    .replay-music {
+        top: 7em;
     }
 
     .music {
-        top: 10.5em;
+        top: 9.5em;
+    }
+
+    .replay-sub {
+        top: 12em;
+    }
+
+    .storytelling {
+        top: 14.5em;
     }
 
     .sizefont {
-        top: 14.5em;
+        top: 17em;
     }
 }
 

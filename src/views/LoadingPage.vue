@@ -41,11 +41,13 @@ export default {
 
         this.orientation = true;
 
-        if(this.isChromium) {
+        if(isChromium) {
             this.playLoading = true;
         } else {
             this.playLoading = false;
         }
+
+        console.log(isChromium);
 
         if(this.loadingInterval === null) {
             /**
@@ -86,7 +88,7 @@ export default {
                 <!-- <img v-if="orientation" class="rotate-device" src="@/assets/image/loading-rotate.svg"> -->
                 <img v-if="!isChromium" class="is-chromium" src="@/assets/image/use-chromium.svg">
             </label>
-            <div v-if="playLoading" class="play-loading-container">
+            <div class="play-loading-container">
                 <img src="/src/assets/image/icon.png">
                 <div class="loading-bar">
                     <div class="loading-bar-fill"></div>
@@ -115,6 +117,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    flex-direction: column;
 }
 
 .background label{

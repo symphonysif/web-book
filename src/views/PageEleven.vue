@@ -313,6 +313,18 @@ export default {
                 this.showInteractive = false;
                 this.changeText(1);
             }
+        },
+        onHomeBtn() {
+            window.location = "https://symphonycolours.com/home";
+        },
+        onReplayMusic() {
+            const bgm = document.getElementById("bgm");
+            bgm.currentTime = 0;
+        },
+        onReplaySub() {
+            if(this.audio != null) {
+                this.playAudio(0);
+            }
         }
     }
 }
@@ -352,11 +364,20 @@ export default {
                 <img src="@/assets/new-icon/panah bawah samping-01.svg">
             </label>
             <FullscreenButton />
-            <label class="button burger-menu storytelling" @click="onSoundClick()">
-                <img src="@/assets/new-icon/no sub-01.svg">
+            <label class="button burger-menu home" @click="onHomeBtn()">
+                <img src="@/assets/new-icon/home-01.svg">
+            </label>
+            <label class="button burger-menu replay-music" @click="onReplayMusic()">
+                <img src="@/assets/new-icon/replay icon logo-01.svg">
             </label>
             <label class="button burger-menu music" @click="onMusicClick()">
                 <img src="@/assets/new-icon/No music-01.svg">
+            </label>
+            <label class="button burger-menu replay-sub" @click="onReplaySub()">
+                <img src="@/assets/new-icon/replay sub-01.svg">
+            </label>
+            <label class="button burger-menu storytelling" @click="onSoundClick()">
+                <img src="@/assets/new-icon/no sub-01.svg">
             </label>
             <label class="button burger-menu sizefont" @click="onChangeFontSize()">
                 <img src="@/assets/new-icon/perbesar huruf-01.svg">
@@ -393,6 +414,57 @@ export default {
     z-index: 200;
     top: 0;
     left: 0;
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+
+    .entrance-video {
+        position: absolute;
+        width: 80vw;
+
+        left: 50%;
+        
+        transform: translateX(-50%);
+    }
+
+    .loop-video {
+        position: absolute;
+        width: 80vw;
+
+        left: 50%;
+        
+        transform: translateX(-50%);
+
+    }
+
+    .interactive img{
+        position: absolute !important;
+        width: 80vw !important;
+
+        /* left: 50%; */
+        
+        transform: translateX(10%);
+    }
+
+    .interactive button {
+        left: 14% !important;
+        transform: translateY(65%) !important;
+    }
+
+    #interactive-1 {
+        left: 10% !important;
+        transform: translateY(450%) !important;
+    }
+
+    #interactive-2 {
+        transform: translateY(420%) !important;
+        left: 16% !important;
+    }
+
+    #interactive-3 {
+        transform: translateY(370%) !important;
+        left: 13% !important;
+    }
 }
 
 .interactive img {

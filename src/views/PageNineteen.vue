@@ -337,6 +337,7 @@ export default {
 
             console.log(src);
 
+            sound.volume = 0.5;
             sound.play();
             bgm.volume = 0;
 
@@ -344,8 +345,25 @@ export default {
                 const bgm = document.getElementById("bgm");
 
                 bgm.volume = 0.5;
+
+                if(this.languageStore.language == "malay") {
+                    sound.volume = 0;
+                }
+            }
+        },
+        onHomeBtn() {
+            window.location = "https://symphonycolours.com/home";
+        },
+        onReplayMusic() {
+            const bgm = document.getElementById("bgm");
+            bgm.currentTime = 0;
+        },
+        onReplaySub() {
+            if(this.audio != null) {
+                this.playAudio(0);
             }
         }
+
     }
 }
 </script>
@@ -406,11 +424,20 @@ export default {
                 <img src="@/assets/new-icon/panah bawah samping-01.svg">
             </label>
             <FullscreenButton />
-            <label class="button burger-menu storytelling" @click="onSoundClick()">
-                <img src="@/assets/new-icon/no sub-01.svg">
+            <label class="button burger-menu home" @click="onHomeBtn()">
+                <img src="@/assets/new-icon/home-01.svg">
+            </label>
+            <label class="button burger-menu replay-music" @click="onReplayMusic()">
+                <img src="@/assets/new-icon/replay icon logo-01.svg">
             </label>
             <label class="button burger-menu music" @click="onMusicClick()">
                 <img src="@/assets/new-icon/No music-01.svg">
+            </label>
+            <label class="button burger-menu replay-sub" @click="onReplaySub()">
+                <img src="@/assets/new-icon/replay sub-01.svg">
+            </label>
+            <label class="button burger-menu storytelling" @click="onSoundClick()">
+                <img src="@/assets/new-icon/no sub-01.svg">
             </label>
             <label class="button burger-menu sizefont" @click="onChangeFontSize()">
                 <img src="@/assets/new-icon/perbesar huruf-01.svg">
@@ -451,6 +478,77 @@ export default {
     z-index: 200;
     top: 0;
     left: 0;
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+
+.entrance-video {
+    position: absolute;
+    width: 80vw;
+
+    left: 50%;
+    
+    transform: translateX(-50%);
+}
+
+.loop-video {
+    position: absolute;
+    width: 80vw;
+
+    left: 50%;
+    
+    transform: translateX(-50%);
+
+}
+
+.interactive img{
+    position: absolute !important;
+    width: 80vw !important;
+
+    /* left: 50%; */
+    
+    transform: translateX(10%);
+}
+
+.interactive button {
+    left: 14% !important;
+    transform: translateY(65%) !important;
+}
+
+#interactive-1 {
+    left: 63% !important;
+    transform: translateY(10%) !important;
+    /* transform: translateY(450%) !important; */
+}
+
+#interactive-2 {
+    /* background-color: blue !important; */
+    /* transform: translateY(420%) !important; */
+    left: 16% !important;
+}
+
+#interactive-3 {
+    left: 17% !important;
+    transform: translateY(200%) !important;
+}
+
+#interactive-4 {
+    width: 23% !important;
+    left: 65% !important;
+    transform: translateY(90%) !important;
+}
+
+#interactive-5 {
+    /* width: % !important; */
+    left: 50% !important;
+    transform: translateY(10%) !important;
+}
+
+#interactive-6 {
+    /* width: % !important; */
+    left: 41% !important;
+    transform: translateY(10%) !important;
+}
 }
 
 .interactive img {

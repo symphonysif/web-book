@@ -161,21 +161,23 @@ export default {
             const fadePanel = document.getElementsByClassName("fade-panel")[0];
             const bgm = document.getElementById("bgm");
 
-            const fadeOut = (timestamp) => {
-                if (!start) {
-                    start = timestamp;
-                }
-                const progress = timestamp - start;
-                fadePanel.style.opacity = progress / 1000 * 0.588; // 0.588 is the opacity value for 1.7 seconds
-                bgm.volume = 1 - progress / 1000 * 0.5;
-                if (progress < 1700) {
-                    requestAnimationFrame(fadeOut);
-                } else {
-                    this.$router.push("/page-two");
-                }
-            }
+            this.$router.push("/page-two");
+
+            // const fadeOut = (timestamp) => {
+            //     if (!start) {
+            //         start = timestamp;
+            //     }
+            //     const progress = timestamp - start;
+            //     fadePanel.style.opacity = progress / 1000 * 0.588; // 0.588 is the opacity value for 1.7 seconds
+            //     bgm.volume = 1 - progress / 1000 * 0.5;
+            //     if (progress < 1700) {
+            //         requestAnimationFrame(fadeOut);
+            //     } else {
+            //         this.$router.push("/page-two");
+            //     }
+            // }
             
-            requestAnimationFrame(fadeOut);
+            // requestAnimationFrame(fadeOut);
         },
         onChangeFontSize() {
             const textImg = this.$refs["text-img"];
@@ -222,6 +224,18 @@ export default {
                 this.showInteractive = false;
                 this.changeText(1);
             }
+        },
+        onHomeBtn() {
+            window.location = "https://symphonycolours.com/home";
+        },
+        onReplayMusic() {
+            const bgm = document.getElementById("bgm");
+            bgm.currentTime = 0;
+        },
+        onReplaySub() {
+            if(this.audio != null) {
+                this.playAudio(0);
+            }
         }
     }
 }
@@ -261,11 +275,20 @@ export default {
                 <img src="@/assets/new-icon/panah bawah samping-01.svg">
             </label>
             <FullscreenButton />
-            <label class="button burger-menu storytelling" @click="onSoundClick()">
-                <img src="@/assets/new-icon/no sub-01.svg">
+            <label class="button burger-menu home" @click="onHomeBtn()">
+                <img src="@/assets/new-icon/home-01.svg">
+            </label>
+            <label class="button burger-menu replay-music" @click="onReplayMusic()">
+                <img src="@/assets/new-icon/replay icon logo-01.svg">
             </label>
             <label class="button burger-menu music" @click="onMusicClick()">
                 <img src="@/assets/new-icon/No music-01.svg">
+            </label>
+            <label class="button burger-menu replay-sub" @click="onReplaySub()">
+                <img src="@/assets/new-icon/replay sub-01.svg">
+            </label>
+            <label class="button burger-menu storytelling" @click="onSoundClick()">
+                <img src="@/assets/new-icon/no sub-01.svg">
             </label>
             <label class="button burger-menu sizefont" @click="onChangeFontSize()">
                 <img src="@/assets/new-icon/perbesar huruf-01.svg">
@@ -294,6 +317,17 @@ export default {
     left: 0;
     width: 100vw;
     z-index: 10;
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+
+    .entrance-video {
+        height: 100vh;
+    }
+
+    .loop-video {
+        height: 100vh;
+    }
 }
 
 .interactive {

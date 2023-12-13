@@ -33,6 +33,11 @@ export default {
             if(e.key == "t") {
                 this.$router.push("/page-twenty-one");
             }
+            if(e.key == "o") {
+                const fadePanel = document.getElementsByClassName("fade-panel")[0];
+
+                fadePanel.style.opacity = "0";
+            }
         })
     }
 }

@@ -35,10 +35,10 @@ export default {
         this.changeText(0);
         
         const bgm = document.getElementById("bgm");
-        bgm.src = this.linkBaseStore.linkBase + "src/assets/audio/music/Spread 2 - Spread 3.wav";
+        //bgm.src = this.linkBaseStore.linkBase + "src/assets/audio/music/Cover - Spread 1.wav";
         const sound = this.$refs["sound"];
 
-        bgm.volume = 0;
+        //bgm.volume = 0;
         sound.volume = 0.5;
 
         if(this.languageStore.language == "malay") {

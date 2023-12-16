@@ -292,17 +292,17 @@ export default {
                 Your browser does not support the video tag
             </video>
             <video muted ref="loop-video" class="loop-video" @ended="onHoldEnd()">
-                <source src="@/assets/video/Spread 7 - Hold.mp4" type="video/mp4">
+                <source src="@/assets/video/(R) Spread 21 - Entrance & Loop.mp4" type="video/mp4">
                 Your browser does not support the video tag
             </video>
-            <span v-if="showInteractive" class="interactive">
+            <!--<span v-if="showInteractive" class="interactive">
                 <button id="interactive-1" @click="onInteractiveClick(1)">
                 </button>
                 <button id="interactive-2" @click="onInteractiveClick(2)">
                 </button>
                 <img src="@/assets/image/spread-7/spread 7 - tokoh macan kecil (untuk di-klik).svg">
                 <img src="@/assets/image/spread-7/spread 7 - tokoh macan wayang (untuk di-klik).svg">
-            </span>
+            </span>-->
             <div class="text-container">
                 <input ref="text-animate-checkbox" type="checkbox" hidden id="text-animate-checkbox">
                 <div class="text">

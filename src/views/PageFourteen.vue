@@ -147,7 +147,7 @@ export default {
             setTimeout(playBGM, 10);
         }
 
-        setTimeout(playBGM, 10);
+        setTimeout(playBGM, 5000);
     },
     methods: {
         onVideoEnd() {

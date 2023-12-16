@@ -365,7 +365,7 @@ export default {
                 Your browser does not support the video tag
             </video>
             <!-- <video muted ref="loop-video" class="loop-video" @ended="onHoldEnd()">
-                <source src="@/assets/video/Spread 7 - Hold.mp4" type="video/mp4">
+                <source src="@/assets/video/Spread 8 - Entrance _ Hold.mp4" type="video/mp4">
                 Your browser does not support the video tag
             </video> -->
             <!-- <span v-if="showInteractive" class="interactive">

@@ -33,7 +33,7 @@ export default {
                         },
                         {
                             soundSource: this.linkBaseStore.linkBase + "src/assets/audio/storytelling/spread-11/indo/(R) big font spread 11 (indo 2).mp3",
-                            textSource: this.linkBaseStore.linkBase + "src/assets/text/spread-11/indo/(R) teks spread 11 indo 2.svg"
+                            textSource: this.linkBaseStore.linkBase + "src/assets/text/spread-11/indo/(R) teks spread 11 indo 1.svg"
                         },
                         {
                             soundSource: this.linkBaseStore.linkBase + "src/assets/audio/storytelling/spread-11/indo/(R) big font spread 11 (indo 3).mp3",
@@ -341,7 +341,7 @@ export default {
                 Your browser does not support the video tag
             </video>
             <video muted ref="loop-video" class="loop-video" @ended="onHoldEnd()">
-                <source src="@/assets/video/Spread 7 - Hold.mp4" type="video/mp4">
+                <source src="@/assets/video/Spread 11 - Entrance _ Hold.mp4" type="video/mp4">
                 Your browser does not support the video tag
             </video>
             <!-- <span v-if="showInteractive" class="interactive">

@@ -117,7 +117,7 @@ export default {
         this.$refs['next-btn'].style.visibility = "hidden";
         
         const bgm = document.getElementById("bgm");
-        // bgm.src = this.linkBaseStore.linkBase + "src/assets/audio/music/Spread 2 - Spread 3.wav";
+        bgm.src = this.linkBaseStore.linkBase + "src/assets/audio/music/Spread 2 - Spread 3.wav";
         const sound = this.$refs["sound"];
 
         // bgm.volume = 0;

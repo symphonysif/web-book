@@ -26,9 +26,9 @@ export default {
     <main>
         <div class="background">
             <img src="@/assets/image/language-icon.svg" class="icon">
-            <img src="/src/assets/image/english.svg" @click="changeLanguage('english')">
-            <img src="/src/assets/image/indo.svg" @click="changeLanguage('indo')">
-            <img src="/src/assets/image/malay.svg" @click="changeLanguage('malay')">
+            <img src="/src/assets/image/language/Bahasa-Inggris-01.svg" @click="changeLanguage('english')">
+            <img src="/src/assets/image/language/Bahasa-Indo-01.svg" @click="changeLanguage('indo')">
+            <img src="/src/assets/image/language/Bahasa-Malay-01.svg" @click="changeLanguage('malay')">
         </div>
     </main>
 </template>

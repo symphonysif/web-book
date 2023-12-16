@@ -33,7 +33,7 @@ export default {
                         },
                         {
                             soundSource: this.linkBaseStore.linkBase + "src/assets/audio/storytelling/spread-11/indo/(R) big font spread 11 (indo 2).mp3",
-                            textSource: this.linkBaseStore.linkBase + "src/assets/text/spread-11/indo/(R) teks spread 11 indo 2.svg"
+                            textSource: this.linkBaseStore.linkBase + "src/assets/text/spread-11/indo/(R) teks spread 11 indo 1.svg"
                         },
                         {
                             soundSource: this.linkBaseStore.linkBase + "src/assets/audio/storytelling/spread-11/indo/(R) big font spread 11 (indo 3).mp3",

@@ -238,7 +238,7 @@ export default {
                 Your browser does not support the video tag
             </video>
             <video muted ref="loop-video" class="loop-video">
-                <source src="@/assets/video/(R) Spread 4 - Hold.mp4" type="video/mp4">
+                <source src="@/assets/video/Spread 4 - Entrance _ Hold Post Rev.mp4" type="video/mp4">
                 Your browser does not support the video tag
                 </video>
             <span v-if="!playLoop" class="interactive">

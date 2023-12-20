@@ -273,11 +273,11 @@ export default {
                 <source src="@/assets/audio/storytelling/Spread 2.mp3" type="audio/mp3">
             </audio>
             <video v-if="!playLoop" muted class="entrance-video" @ended="onVideoEnd()">
-                <source src="@/assets/video/Spread 10 - Entrance Post Rev.mp4" type="video/mp4">
+                <source src="@/assets/video/Spread 10 - Entrance.mp4" type="video/mp4">
                 Your browser does not support the video tag
             </video>
             <video muted loop ref="loop-video" class="loop-video">
-                <source src="@/assets/video/Spread 10 - Loop Post Rev.mp4" type="video/mp4">
+                <source src="@/assets/video/Spread 10 - Loop.mp4" type="video/mp4">
                 Your browser does not support the video tag
             </video>
             <span v-if="showInteractive" class="interactive">

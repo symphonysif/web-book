@@ -301,7 +301,7 @@ export default {
                 class="entrance-video" 
                 @ended="onVideoEnd()"
             >
-                <source src="@/assets/video/Cover Malay - Entrance _ Hold.mp4" type="video/mp4">
+                <source src="@/assets/video/Cover Indo - Entrance _ Hold.mp4" type="video/mp4">
                 Your browser does not support the video tag
             </video>
             <!-- <video v-if="!playLoop" autoplay muted class="entrance-video" @ended="onVideoEnd()">
